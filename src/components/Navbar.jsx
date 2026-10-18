@@ -9,8 +9,8 @@ function Navbar({ title, searchValue, onSearchChange, onMenuClick }) {
     }
 
     function handleSettings() {
-        alert("Settings section is not included in this exam project.");
-    }
+    navigate("/settings");
+}
 
     function handleNotification() {
         alert("You have no new notifications.");
