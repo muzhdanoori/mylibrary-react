@@ -67,12 +67,13 @@ function FindLibrary() {
             <main className="main-content">
 
                 <Navbar
-                    title="Find Library"
-                    onMenuClick={() =>
-                        setSidebarOpen(!sidebarOpen)
-                    }
-                />
-
+    title="Find Library"
+    searchValue={search}
+    onSearchChange={setSearch}
+    onMenuClick={() =>
+        setSidebarOpen(!sidebarOpen)
+    }
+/>
 
                 {/* HERO */}
 

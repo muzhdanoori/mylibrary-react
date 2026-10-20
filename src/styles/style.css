@@ -1535,3 +1535,223 @@ a {
     font-size: 28px;
   }
 }
+
+
+/* ================================================= */
+/* READING CORNER - SIDEBAR CARD */
+/* ================================================= */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Keep the navigation menu together */
+.sidebar-menu {
+    flex-shrink: 0;
+}
+
+/* Reading Corner Card */
+.reading-corner-box {
+    position: relative;
+    flex-shrink: 0;
+
+    margin-top: auto;
+    padding: 15px 11px 12px;
+
+    border-radius: 13px;
+
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(255, 255, 255, 0.45),
+            transparent 40%
+        ),
+        linear-gradient(145deg, #f1e5ff, #fce8f5);
+
+    border: 1px solid #eadcf8;
+
+    color: #46345f;
+
+    overflow: hidden;
+}
+
+/* Decorative circle */
+.reading-corner-box::after {
+    content: "";
+    position: absolute;
+
+    width: 65px;
+    height: 65px;
+
+    right: -27px;
+    top: 35px;
+
+    border-radius: 50%;
+    background: rgba(157, 105, 220, 0.10);
+
+    pointer-events: none;
+}
+
+/* Book Icon */
+.reading-corner-icon {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+    color: #8752c8;
+
+    box-shadow: 0 3px 10px rgba(95, 59, 145, 0.08);
+
+    font-size: 17px;
+}
+
+/* Small Label */
+.reading-corner-label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #8c63b2;
+
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+/* Heading */
+.reading-corner-box h3 {
+    margin: 0 0 7px;
+
+    color: #48315f;
+
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* Description */
+.reading-corner-box p {
+    margin: 0 0 12px;
+
+    color: #746281;
+
+    font-size: 9px;
+    line-height: 1.6;
+}
+
+/* Explore Books Link */
+.reading-corner-button {
+    position: relative;
+    z-index: 1;
+
+    min-height: 33px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 5px;
+    padding: 0 9px;
+
+    border-radius: 7px;
+
+    background: linear-gradient(110deg, #8d55d1, #bd4ba9);
+
+    color: #ffffff;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.reading-corner-button i {
+    font-size: 10px;
+    transition: transform 0.2s ease;
+}
+
+.reading-corner-button:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 12px rgba(128, 73, 177, 0.22);
+}
+
+.reading-corner-button:hover i {
+    transform: translateX(3px);
+}
+
+/* Footer Text */
+.reading-corner-footer {
+    margin-top: 11px;
+
+    color: #957eaa;
+
+    font-size: 6px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+/* Smaller Sidebar */
+@media (max-width: 1000px) {
+    .reading-corner-box {
+        padding: 12px 9px 10px;
+    }
+
+    .reading-corner-box h3 {
+        font-size: 12px;
+    }
+}
+
+/* Short Screens */
+@media (max-height: 700px) {
+    .sidebar {
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+    .logo-area {
+        padding-bottom: 16px;
+    }
+
+    .sidebar-link {
+        height: 40px;
+    }
+
+    .reading-corner-box {
+        margin-top: 16px;
+        padding: 10px;
+    }
+
+    .reading-corner-icon {
+        width: 29px;
+        height: 29px;
+        margin-bottom: 7px;
+    }
+
+    .reading-corner-box p {
+        margin-bottom: 8px;
+    }
+
+    .reading-corner-footer {
+        margin-top: 8px;
+    }
+}

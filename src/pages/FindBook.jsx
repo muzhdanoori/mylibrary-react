@@ -76,9 +76,11 @@ function FindBook() {
 
             <main className="main-content">
                 <Navbar
-                    title="Find Book"
-                    onMenuClick={() => setSidebarOpen(!sidebarOpen)}
-                />
+    title="Find Book"
+    searchValue={search}
+    onSearchChange={setSearch}
+    onMenuClick={() => setSidebarOpen(!sidebarOpen)}
+/>
 
                 <section className="hero-section">
                     <h1>Find a Book</h1>
