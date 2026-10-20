@@ -46,9 +46,9 @@ function Login() {
     }
 
 
-    function handleSignUp() {
-        alert("Sign Up page is not included in this exam project.");
-    }
+   function handleSignUp() {
+    window.location.href = "/SignUp";
+}
 
 
     function handleForgotPassword(event) {
