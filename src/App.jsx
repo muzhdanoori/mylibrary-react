@@ -8,6 +8,7 @@ import BookMarketStore from "./pages/BookMarketStore";
 import FindStudyCenter from "./pages/FindStudyCenter";
 import ReadingProfile from "./pages/ReadingProfile";
 import Settings from "./pages/Settings";
+import SignUp from "./SignUp"
 
 function App() {
 
@@ -19,6 +20,10 @@ function App() {
                 path="/"
                 element={<Login />}
             />
+          <Route
+                  path="/signup"
+                  element={<SignUp/>}
+          />
 
             <Route
                 path="/dashboard"
