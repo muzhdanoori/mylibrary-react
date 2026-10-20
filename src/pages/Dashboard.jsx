@@ -24,9 +24,14 @@ function Dashboard() {
         }
     ];
 
-    const filteredBooks = recentBooks.filter((book) =>
-        book.name.toLowerCase().includes(search.toLowerCase().trim())
+   const filteredBooks = recentBooks.filter((book) => {
+    const query = search.trim().toLowerCase();
+
+    return (
+        book.name.toLowerCase().includes(query) ||
+        book.author.toLowerCase().includes(query)
     );
+});
 
 
     function showDetails() {
@@ -371,6 +376,11 @@ function Dashboard() {
 
 
                         <div className="recent-books">
+                            {filteredBooks.length === 0 && (
+    <p className="no-search-results">
+        No books found. Try another title or author.
+    </p>
+)}
 
                             {filteredBooks.map((book) => (
 

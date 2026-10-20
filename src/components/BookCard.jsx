@@ -1,5 +1,5 @@
-function BookCard({ book }) {
 
+function BookCard({ book }) {
     return (
         <div
             className="book-card"
@@ -7,14 +7,19 @@ function BookCard({ book }) {
             data-author={book.author}
             data-category={book.category}
         >
-
             <div className={`book-cover ${book.category.toLowerCase()}`}>
-                <i className="fa-solid fa-book"></i>
+                {book.image ? (
+                    <img
+                        src={book.image}
+                        alt={`Cover of ${book.name}`}
+                        className="book-cover-image"
+                    />
+                ) : (
+                    <i className="fa-solid fa-book"></i>
+                )}
             </div>
 
-
             <div className="book-info">
-
                 <h3>{book.name}</h3>
 
                 <p>
@@ -24,7 +29,6 @@ function BookCard({ book }) {
                 <p>
                     <strong>Category:</strong> {book.category}
                 </p>
-
 
                 <span
                     className={
@@ -36,7 +40,6 @@ function BookCard({ book }) {
                     {book.status}
                 </span>
 
-
                 <button
                     className="details-button"
                     onClick={() =>
@@ -45,9 +48,7 @@ function BookCard({ book }) {
                 >
                     View Details
                 </button>
-
             </div>
-
         </div>
     );
 }
